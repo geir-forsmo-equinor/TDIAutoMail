@@ -1,10 +1,11 @@
 Screen1 As screen:
+    Fill: =RGBA(0, 0, 0, 1)
 
     DataTable1 As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =588
+        Height: =120
         Items: ='TDI DO AutoMail Status List'
         Width: =1285
         X: =40
@@ -108,4 +109,112 @@ Screen1 As screen:
             X: =0
             Y: =0
             ZIndex: =7
+
+    Button1 As button:
+        OnSelect: |-
+            =//create GUID
+            Set(gbl_stateGUID,GUID());
+            
+            //start Power Automate Flow
+            flowStatus.Run(gbl_stateGUID)
+        Text: ="Submit"
+        X: =421
+        Y: =193
+        ZIndex: =2
+
+    Timer1 As timer:
+        AutoStart: =!IsBlank(gbl_stateGUID)
+        Duration: =500
+        OnTimerEnd: |-
+            =Refresh(LogList);
+            UpdateContext({loc_currentStatus: LookUp(LogList,GUID=Text(gbl_stateGUID))})
+        Repeat: =loc_currentStatus.Status<>3
+        X: =1041
+        Y: =193
+        ZIndex: =3
+
+    Gallery1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =436
+        Items: |-
+            =Table(
+                {
+                    Id: 1,
+                    Value: "validated data",
+                    Icon: Icon.Check
+                },
+                {
+                    Id: 2,
+                    Value: "approval pending",
+                    Icon: Icon.Check
+                },
+                {
+                    Id: 3,
+                    Value: "approval granted",
+                    Icon: Icon.Check
+                }
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =91
+        Width: =336
+        X: =435
+        Y: =295
+        ZIndex: =4
+
+        Label1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Value
+            Width: =236
+            X: =85
+            Y: =22
+            ZIndex: =1
+
+        Circle2 As circle:
+            BorderColor: =RGBA(136, 160, 209, 1)
+            BorderThickness: =1
+            Fill: =If(loc_currentStatus.Status>=ThisItem.Id, Self.BorderColor, Color.Transparent)
+            Height: =30
+            OnSelect: =Select(Parent)
+            Width: =30
+            X: =32
+            Y: =27
+            ZIndex: =2
+
+        Rectangle3 As rectangle:
+            Height: =91
+            OnSelect: =Select(Parent)
+            Visible: =If(loc_currentStatus.Status>=ThisItem.Id, true, false)
+            Width: =11
+            X: =40
+            ZIndex: =3
+
+        Icon2 As icon.Check:
+            Height: =35
+            Icon: =Icon.Check
+            OnSelect: =Select(Parent)
+            Visible: =loc_currentStatus.Status>=ThisItem.Id
+            Width: =25
+            X: =40
+            Y: =24
+            ZIndex: =4
+
+    Button2 As button:
+        OnSelect: |-
+            =UpdateContext(
+                {
+                    loc_currentStatus: Patch(loc_currentStatus,
+                        {
+                            Status: 0,
+                            Title: "you submitted"
+                        }
+                    )
+                }
+            );
+             Set(gbl_stateGUID,"");
+        Text: ="Reset"
+        X: =620
+        Y: =193
+        ZIndex: =5
 

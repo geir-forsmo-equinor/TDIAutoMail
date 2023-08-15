@@ -3,22 +3,32 @@
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
+    "Button1": 13,
+    "Button2": 21,
+    "Circle2": 22,
     "Comments_Column1": 9,
     "DataTable1": 5,
     "Duration_Column1": 10,
+    "Gallery1": 15,
+    "galleryTemplate1": 16,
     "Host": 3,
+    "Icon2": 26,
+    "Label1": 17,
     "Receiver Count_Column1": 12,
+    "Rectangle3": 25,
     "Run Name_Column1": 6,
     "Run Type_Column1": 7,
     "Screen1": 4,
     "Sent Count_Column1": 11,
-    "Status_Column1": 8
+    "Status_Column1": 8,
+    "Timer1": 14
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/15/2023 12:08:05",
+  "HeaderLastSavedDateTimeUTC": "08/15/2023 14:03:51",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
+    "03d1555c-e8d7-4893-a318-e412319da221": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/D7ED4F89A60ECD8F030136140D8E0F3E-591075A67533AA25\"",
     "d90efd73-11e4-4604-800d-7c5609504d96": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-0c3b45b8-e291-4213-b128-62a39be1e251\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
@@ -27,51 +37,81 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "TDI DO AutoMail Status List": 0
+    "CustomGallerySample": 2,
+    "flowStatus": 0,
+    "LogList": 3,
+    "TDI DO AutoMail Status List": 1
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
-  "OrderXMLTemplate": {},
+  "OrderXMLTemplate": {
+    "button": 0,
+    "circle": 6,
+    "gallery": 2,
+    "icon": 4,
+    "label": 3,
+    "rectangle": 5,
+    "timer": 1
+  },
   "OverridablePropertiesEntry": {
     "App": {},
+    "Button1": {},
+    "Button2": {},
+    "Circle2": {},
     "Comments_Column1": {},
     "DataTable1": {},
     "Duration_Column1": {},
+    "Gallery1": {},
+    "galleryTemplate1": {},
     "Host": {},
+    "Icon2": {},
+    "Label1": {},
     "Receiver Count_Column1": {},
+    "Rectangle3": {},
     "Run Name_Column1": {},
     "Run Type_Column1": {},
     "Screen1": {},
     "Sent Count_Column1": {},
-    "Status_Column1": {}
+    "Status_Column1": {},
+    "Timer1": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
     "App": 0,
+    "Button1": 0,
+    "Button2": 0,
+    "Circle2": 0,
     "Comments_Column1": 4,
     "DataTable1": 0,
     "Duration_Column1": 5,
+    "Gallery1": 0,
+    "galleryTemplate1": 0,
     "Host": 0,
+    "Icon2": 0,
+    "Label1": 0,
     "Receiver Count_Column1": 7,
+    "Rectangle3": 0,
     "Run Name_Column1": 1,
     "Run Type_Column1": 2,
     "Screen1": 0,
     "Sent Count_Column1": 6,
-    "Status_Column1": 3
+    "Status_Column1": 3,
+    "Timer1": 0
   },
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0713162,
+    "AnalysisLoadTime": 0.0694222,
     "ControlCount": {
       "dataTable": 1,
       "dataTableColumn": 7,
+      "rectangle": 1,
       "screen": 1
     },
-    "DeserializationLoadTime": 0.8389933
+    "DeserializationLoadTime": 0.9004484
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
