@@ -9,3 +9,8 @@ This Solution is deployed solely for the use for .....
 ---
 _see image below for design view_
 ![](images/error_github.png)
+
+
+
+## Resources
+https://www.youtube.com/watch?v=FVGh8kDdaCA&t=3691s - Documenting Power Platform Projects on GitHub
