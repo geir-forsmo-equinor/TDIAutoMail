@@ -129,6 +129,7 @@ Screen1 As screen:
             =Refresh(LogList);
             UpdateContext({loc_currentStatus: LookUp(LogList,GUID=Text(gbl_stateGUID))})
         Repeat: =loc_currentStatus.Status<>3
+        Visible: =false
         X: =1041
         Y: =193
         ZIndex: =3
@@ -156,7 +157,7 @@ Screen1 As screen:
             )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =91
+        TemplateSize: =73
         Width: =336
         X: =435
         Y: =295
@@ -166,38 +167,38 @@ Screen1 As screen:
             Color: =RGBA(255, 255, 255, 1)
             OnSelect: =Select(Parent)
             Text: =ThisItem.Value
-            Width: =236
-            X: =85
-            Y: =22
+            Width: =252
+            X: =70
             ZIndex: =1
 
         Circle2 As circle:
-            BorderColor: =RGBA(136, 160, 209, 1)
+            BorderColor: =RGBA(39, 113, 194, 1)
             BorderThickness: =1
             Fill: =If(loc_currentStatus.Status>=ThisItem.Id, Self.BorderColor, Color.Transparent)
             Height: =30
             OnSelect: =Select(Parent)
             Width: =30
-            X: =32
-            Y: =27
+            X: =25
             ZIndex: =2
 
-        Rectangle3 As rectangle:
-            Height: =91
-            OnSelect: =Select(Parent)
-            Visible: =If(loc_currentStatus.Status>=ThisItem.Id, true, false)
-            Width: =11
-            X: =40
-            ZIndex: =3
-
         Icon2 As icon.Check:
-            Height: =35
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =25
             Icon: =Icon.Check
             OnSelect: =Select(Parent)
             Visible: =loc_currentStatus.Status>=ThisItem.Id
             Width: =25
+            X: =28
+            Y: =3
+            ZIndex: =3
+
+        Rectangle7 As rectangle:
+            Fill: =RGBA(39, 113, 194, 1)
+            Height: =40
+            OnSelect: =Select(Parent)
+            Width: =0
             X: =40
-            Y: =24
+            Y: =30
             ZIndex: =4
 
     Button2 As button:
