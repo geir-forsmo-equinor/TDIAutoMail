@@ -1,0 +1,77 @@
+{
+  "ComponentIndexes": {},
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "Comments_Column1": 9,
+    "DataTable1": 5,
+    "Duration_Column1": 10,
+    "Host": 3,
+    "Receiver Count_Column1": 12,
+    "Run Name_Column1": 6,
+    "Run Type_Column1": 7,
+    "Screen1": 4,
+    "Sent Count_Column1": 11,
+    "Status_Column1": 8
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "08/15/2023 12:08:05",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {
+    "d90efd73-11e4-4604-800d-7c5609504d96": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-0c3b45b8-e291-4213-b128-62a39be1e251\""
+  },
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OrderComponentMetadata": {},
+  "OrderComponentTemplate": {},
+  "OrderDataSource": {
+    "TDI DO AutoMail Status List": 0
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {},
+  "OverridablePropertiesEntry": {
+    "App": {},
+    "Comments_Column1": {},
+    "DataTable1": {},
+    "Duration_Column1": {},
+    "Host": {},
+    "Receiver Count_Column1": {},
+    "Run Name_Column1": {},
+    "Run Type_Column1": {},
+    "Screen1": {},
+    "Sent Count_Column1": {},
+    "Status_Column1": {}
+  },
+  "PCFDynamicSchemaForIRRetrievalEntry": {},
+  "PCFTemplateEntry": {},
+  "PublishOrderIndices": {
+    "App": 0,
+    "Comments_Column1": 4,
+    "DataTable1": 0,
+    "Duration_Column1": 5,
+    "Host": 0,
+    "Receiver Count_Column1": 7,
+    "Run Name_Column1": 1,
+    "Run Type_Column1": 2,
+    "Screen1": 0,
+    "Sent Count_Column1": 6,
+    "Status_Column1": 3
+  },
+  "ResourcesJsonIndices": {},
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.0713162,
+    "ControlCount": {
+      "dataTable": 1,
+      "dataTableColumn": 7,
+      "screen": 1
+    },
+    "DeserializationLoadTime": 0.8389933
+  },
+  "WasLocalDatabaseReferencesEmpty": true
+}

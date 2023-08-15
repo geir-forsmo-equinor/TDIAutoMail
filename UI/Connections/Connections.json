@@ -1,0 +1,35 @@
+{
+  "d90efd73-11e4-4604-800d-7c5609504d96": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://statoilsrm.sharepoint.com/sites/TDIDOIMAutoMail_tdioff_shared_sharepointonline_107a3eba7637445d95c6e7b1e2ae76e2": {
+        "datasetOverride": {
+          "environmentVariableName": "tdioff_shared_sharepointonline_107a3eba7637445d95c6e7b1e2ae76e2",
+          "name": "https://statoilsrm.sharepoint.com/sites/TDIDOIMAutoMail"
+        },
+        "dataSources": {
+          "TDI DO AutoMail Status List": {
+            "tableName": "d7b8c37e-8767-4b1b-9b94-e65ee4c02c61",
+            "tableNameOverride": {
+              "environmentVariableName": "tdioff_shared_sharepointonline_b8a9f7d86a7544d6bcdcc6a5638764ac",
+              "name": "d7b8c37e-8767-4b1b-9b94-e65ee4c02c61"
+            }
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "TDI DO AutoMail Status List"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "d90efd73-11e4-4604-800d-7c5609504d96"
+  }
+}

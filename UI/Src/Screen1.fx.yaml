@@ -1,0 +1,111 @@
+Screen1 As screen:
+
+    DataTable1 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =588
+        Items: ='TDI DO AutoMail Status List'
+        Width: =1285
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+        "'Run Name_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Run Name"
+            FieldName: ="Title"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.'Run Name'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        "'Run Type_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Run Type"
+            FieldName: ="SecurityClassification"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.'Run Type'.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        Status_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Status"
+            FieldName: ="Status"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Status.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        Comments_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Comments"
+            FieldName: ="Comments"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.Comments
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        Duration_Column1 As dataTableColumn.dateTimeColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Duration"
+            FieldName: ="Duration"
+            FieldVariantName: ="dateTimeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =Text(ThisItem.Duration,DateTimeFormat.LongDateTime)
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+        "'Sent Count_Column1' As dataTableColumn.numberColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Sent Count"
+            FieldName: ="SentCount"
+            FieldVariantName: ="numberColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =6
+            Text: =ThisItem.'Sent Count'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =6
+
+        "'Receiver Count_Column1' As dataTableColumn.numberColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Receiver Count"
+            FieldName: ="ReceiverCount"
+            FieldVariantName: ="numberColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: =ThisItem.'Receiver Count'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =7
+
