@@ -174,15 +174,6 @@ Screen1 As screen:
             Y: =3
             ZIndex: =1
 
-        Rectangle8 As rectangle:
-            Height: =66
-            OnSelect: =Select(Parent)
-            Visible: =If(loc_currentStatus.Status>=ThisItem.Id, true, false)
-            Width: =0
-            X: =15
-            Y: =26
-            ZIndex: =2
-
         Circle2 As circle:
             BorderColor: =RGBA(39, 113, 194, 1)
             BorderThickness: =1
@@ -190,7 +181,7 @@ Screen1 As screen:
             Height: =28
             OnSelect: =Select(Parent)
             Width: =30
-            ZIndex: =3
+            ZIndex: =2
 
         Icon2 As icon.Check:
             Color: =RGBA(255, 255, 255, 1)
@@ -201,6 +192,15 @@ Screen1 As screen:
             Width: =25
             X: =3
             Y: =3
+            ZIndex: =3
+
+        Rectangle8 As rectangle:
+            Height: =66
+            OnSelect: =Select(Parent)
+            Visible: =If(loc_currentStatus.Status>=ThisItem.Id, true, false)
+            Width: =0
+            X: =15
+            Y: =26
             ZIndex: =4
 
     Button2 As button:
