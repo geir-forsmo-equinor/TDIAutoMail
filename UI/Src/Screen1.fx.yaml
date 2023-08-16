@@ -195,11 +195,11 @@ Screen1 As screen:
             ZIndex: =3
 
         Rectangle8 As rectangle:
-            Height: =66
+            Height: =70
             OnSelect: =Select(Parent)
             Visible: =If(loc_currentStatus.Status>=ThisItem.Id, true, false)
-            Width: =0
-            X: =15
+            Width: =3
+            X: =13
             Y: =26
             ZIndex: =4
 
