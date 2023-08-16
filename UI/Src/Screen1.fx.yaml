@@ -181,7 +181,6 @@ Screen1 As screen:
             Visible: =If(loc_currentStatus.Status>=ThisItem.Id, true, false)
             Width: =3
             X: =13
-            Y: =30
             ZIndex: =2
 
         Circle2 As circle:
