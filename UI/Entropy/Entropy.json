@@ -13,6 +13,7 @@
     "Duration_Column1": 10,
     "Gallery1": 15,
     "galleryTemplate1": 16,
+    "group_owners_Column1": 30,
     "Host": 3,
     "Icon1": 25,
     "Icon2": 18,
@@ -24,20 +25,21 @@
     "Run Name_Column1": 6,
     "Run Type_Column1": 7,
     "Screen1": 4,
+    "security_classification_Column1": 31,
     "Sent Count_Column1": 11,
     "Status_Column1": 8,
     "Timer1": 14,
-    "title_Column1": 27,
-    "url_Column1": 28
+    "title_Column2": 29,
+    "url_Column2": 32
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/16/2023 14:08:11",
+  "HeaderLastSavedDateTimeUTC": "08/16/2023 14:28:32",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "24256ded-f44e-4611-9b1e-5a870ead2119": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/851009136B301651163589F3C51D9D17-591075A67533AA25\"",
-    "2c20abcb-83c4-4ef2-8143-727399956fa5": "\"/providers/microsoft.powerapps/apis/shared_excelonlinebusiness/connections/shared-excelonlinebu-b6c0675b-3367-4398-8b66-f3198f844dc8\"",
+    "27c1af6e-ad32-452e-bfa3-896bc6e5bc4d": "\"/providers/microsoft.powerapps/apis/shared_excelonlinebusiness/connections/shared-excelonlinebu-b6c0675b-3367-4398-8b66-f3198f844dc8\"",
     "3c3dc397-8611-44f6-a9fb-21e88d0e2dbb": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/d7ed4f89a60ecd8f030136140d8e0f3e-591075a67533aa25\"",
+    "80e30f4c-d424-4474-a8e2-f715c435b5d4": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/851009136B301651163589F3C51D9D17-591075A67533AA25\"",
     "d90efd73-11e4-4604-800d-7c5609504d96": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-0c3b45b8-e291-4213-b128-62a39be1e251\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
@@ -46,8 +48,8 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "col_attachment_flow": 5,
-    "col_parseJSON": 6,
+    "col_attachment_flow": 6,
+    "col_parseJSON": 5,
     "CustomGallerySample": 3,
     "flowStatus": 0,
     "LogList": 4,
@@ -80,6 +82,7 @@
     "Duration_Column1": {},
     "Gallery1": {},
     "galleryTemplate1": {},
+    "group_owners_Column1": {},
     "Host": {},
     "Icon1": {},
     "Icon2": {},
@@ -91,11 +94,12 @@
     "Run Name_Column1": {},
     "Run Type_Column1": {},
     "Screen1": {},
+    "security_classification_Column1": {},
     "Sent Count_Column1": {},
     "Status_Column1": {},
     "Timer1": {},
-    "title_Column1": {},
-    "url_Column1": {}
+    "title_Column2": {},
+    "url_Column2": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
@@ -111,6 +115,7 @@
     "Duration_Column1": 5,
     "Gallery1": 0,
     "galleryTemplate1": 0,
+    "group_owners_Column1": 0,
     "Host": 0,
     "Icon1": 1,
     "Icon2": 0,
@@ -122,11 +127,12 @@
     "Run Name_Column1": 1,
     "Run Type_Column1": 2,
     "Screen1": 0,
+    "security_classification_Column1": 0,
     "Sent Count_Column1": 6,
     "Status_Column1": 3,
     "Timer1": 0,
-    "title_Column1": 0,
-    "url_Column1": 0
+    "title_Column2": 0,
+    "url_Column2": 0
   },
   "ResourcesJsonIndices": {
     "Image-SampleImage": 0
