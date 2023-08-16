@@ -274,7 +274,9 @@ Screen1 As screen:
                 ForAll( Table(ParseJSON(varExcel)), 
                     { 
                         title: Text( Value.title), 
-                        url: Text( Value.url)
+                        url: Text( Value.url),
+                        group_owners:Text(Value.group_owners),
+                        security_classification: Text(Value.group_owners)
                     }
                 )
             );
@@ -304,11 +306,11 @@ Screen1 As screen:
         Color: =RGBA(26, 26, 26, 1)
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =400
+        Height: =385
         Items: =col_parseJSON
-        Width: =800
-        X: =466
-        Y: =309
+        Width: =771
+        X: =495
+        Y: =325
         ZIndex: =10
 
         title_Column1 As dataTableColumn.textualColumn:
