@@ -251,7 +251,7 @@ Screen1 As screen:
         HoverFill: =Color.Transparent
         IsInDataCard: =true
         Items: =
-        OnAddFile: |
+        OnAddFile: |+
             =Set(varDemoFromAttachmentControl, JSON(img_datastream.Image, JSONFormat.IncludeBinaryData));
             Set(varBase64Only, Mid(varDemoFromAttachmentControl, Find(",", varDemoFromAttachmentControl) + 1, Len(varDemoFromAttachmentControl) - Find(",", varDemoFromAttachmentControl) - 1));
             //Set(varFileLink, UploadFile.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).sharepointfilelink);
@@ -270,9 +270,18 @@ Screen1 As screen:
             
             Set(varExcel, UploadAndValidateExcel.Run(JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
             
-            ClearCollect(col_parseJSON, Table(ParseJSON(varExcel)));
+            CClearCollect(col_parseJSON,
+                ForAll( Table(ParseJSON(varExcel)), 
+                    { 
+                        title: Text( Value.title), 
+                        url: Text( Value.url)
+                    }
+                )
+            );
             
             Reset(AttachmentControl);
+            
+            
         PaddingBottom: =5
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         PaddingRight: =5
