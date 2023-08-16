@@ -276,7 +276,7 @@ Screen1 As screen:
                         title: Text( Value.title), 
                         url: Text( Value.url),
                         group_owners:Text(Value.group_owners),
-                        security_classification: Text(Value.group_owners)
+                        security_classification: Text(Value.security_classification)
                     }
                 )
             );
