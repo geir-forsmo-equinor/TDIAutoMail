@@ -22,7 +22,7 @@ Screen1 As screen:
             Order: =1
             Text: =ThisItem.'Run Name'
             Width: =100
-            X: =0
+            X: =135
             Y: =0
             ZIndex: =1
 
@@ -118,8 +118,8 @@ Screen1 As screen:
             //start Power Automate Flow
             flowStatus.Run(gbl_stateGUID)
         Text: ="Submit"
-        X: =421
-        Y: =193
+        X: =40
+        Y: =139
         ZIndex: =2
 
     Timer1 As timer:
@@ -161,8 +161,8 @@ Screen1 As screen:
         ShowScrollbar: =false
         TemplateSize: =88
         Width: =336
-        X: =435
-        Y: =295
+        X: =54
+        Y: =241
         ZIndex: =4
 
         Label1 As label:
@@ -219,8 +219,8 @@ Screen1 As screen:
             );
              Set(gbl_stateGUID,"");
         Text: ="Reset"
-        X: =620
-        Y: =193
+        X: =239
+        Y: =139
         ZIndex: =5
 
     Label3 As label:
@@ -228,7 +228,52 @@ Screen1 As screen:
         Text: |-
             ="Current State: " & loc_currentStatus.Title
         Width: =378
-        X: =455
-        Y: =670
+        X: =40
+        Y: =524
         ZIndex: =6
+
+    Icon1 As icon.Add:
+        Height: =96
+        Icon: =Icon.Add
+        Width: =80
+        X: =733
+        Y: =156
+        ZIndex: =7
+
+    AttachmentControl As attachments:
+        BorderColor: =Color.Transparent
+        Color: =Color.Transparent
+        DisplayMode: =
+        Fill: =Color.Transparent
+        Height: =144
+        HoverBorderColor: =Color.Black
+        HoverColor: =Color.Transparent
+        HoverFill: =Color.Transparent
+        IsInDataCard: =true
+        Items: =
+        OnAddFile: |
+            =Set(varDemoFromAttachmentControl, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
+            Set(varBase64Only, Mid(varDemoFromAttachmentControl, Find(",", varDemoFromAttachmentControl) + 1, Len(varDemoFromAttachmentControl) - Find(",", varDemoFromAttachmentControl) - 1));
+            //Set(varFileLink, UploadFile.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).sharepointfilelink);
+            
+            /*If(UploadandSaveToSharepoint.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).success = "true",
+                Notify("Flow Run Completed Successfully", NotificationType.Success, 2000),
+                Notify("Flow Failed To Run", NotificationType.Error, 2000));*/
+            Reset(AttachmentControl);
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        Tooltip: =
+        Width: =182
+        X: =682
+        Y: =132
+        ZIndex: =8
+
+    Image1 As image:
+        Image: =Last(AttachmentControl.Attachments).Value
+        Visible: =false
+        X: =1266
+        Y: =668
+        ZIndex: =9
 
