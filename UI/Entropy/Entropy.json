@@ -30,7 +30,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/16/2023 12:30:35",
+  "HeaderLastSavedDateTimeUTC": "08/16/2023 12:31:21",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "3c3dc397-8611-44f6-a9fb-21e88d0e2dbb": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/d7ed4f89a60ecd8f030136140d8e0f3e-591075a67533aa25\"",
@@ -45,6 +45,7 @@
   "OrderComponentTemplate": {},
   "OrderDataSource": {
     "col_attachment_flow": 5,
+    "col_parseJSON": 6,
     "CustomGallerySample": 3,
     "flowStatus": 0,
     "LogList": 4,

@@ -270,7 +270,7 @@ Screen1 As screen:
             
             Set(varExcel, UploadAndValidateExcel.Run(JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
             
-            CClearCollect(col_parseJSON,
+            ClearCollect(col_parseJSON,
                 ForAll( Table(ParseJSON(varExcel)), 
                     { 
                         title: Text( Value.title), 
