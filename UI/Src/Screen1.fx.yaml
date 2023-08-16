@@ -270,7 +270,7 @@ Screen1 As screen:
             
             Set(varExcel, UploadAndValidateExcel.Run(JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
             
-            ClearCollect(col_parseJSON, Table(ParseJSON(varExcel)));
+            //ClearCollect(col_parseJSON, Table(ParseJSON(varExcel)));
             
             Reset(AttachmentControl);
         PaddingBottom: =5
@@ -289,4 +289,15 @@ Screen1 As screen:
         X: =1266
         Y: =668
         ZIndex: =9
+
+    DataTable2 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =207
+        Items: =col_parseJSON
+        Width: =800
+        X: =490
+        Y: =485
+        ZIndex: =10
 

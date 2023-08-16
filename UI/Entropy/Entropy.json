@@ -9,6 +9,7 @@
     "Circle2": 20,
     "Comments_Column1": 9,
     "DataTable1": 5,
+    "DataTable2": 26,
     "Duration_Column1": 10,
     "Gallery1": 15,
     "galleryTemplate1": 16,
@@ -29,13 +30,13 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/16/2023 11:13:42",
+  "HeaderLastSavedDateTimeUTC": "08/16/2023 12:16:05",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "3c3dc397-8611-44f6-a9fb-21e88d0e2dbb": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/d7ed4f89a60ecd8f030136140d8e0f3e-591075a67533aa25\"",
-    "8b6f6111-3097-480b-9c89-998ce1a31034": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/851009136B301651163589F3C51D9D17-591075A67533AA25\"",
+    "d44b367e-d042-49d5-b6ca-fc20c5c711d2": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/851009136B301651163589F3C51D9D17-591075A67533AA25\"",
     "d90efd73-11e4-4604-800d-7c5609504d96": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-0c3b45b8-e291-4213-b128-62a39be1e251\"",
-    "e68bedb6-044d-4792-8231-7936155410a5": "\"/providers/microsoft.powerapps/apis/shared_excelonlinebusiness/connections/shared-excelonlinebu-b6c0675b-3367-4398-8b66-f3198f844dc8\""
+    "e2c8fe74-8fd8-4680-922a-34cbe704d127": "\"/providers/microsoft.powerapps/apis/shared_excelonlinebusiness/connections/shared-excelonlinebu-b6c0675b-3367-4398-8b66-f3198f844dc8\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
@@ -44,7 +45,6 @@
   "OrderComponentTemplate": {},
   "OrderDataSource": {
     "col_attachment_flow": 5,
-    "col_parseJSON": 6,
     "CustomGallerySample": 3,
     "flowStatus": 0,
     "LogList": 4,
@@ -73,6 +73,7 @@
     "Circle2": {},
     "Comments_Column1": {},
     "DataTable1": {},
+    "DataTable2": {},
     "Duration_Column1": {},
     "Gallery1": {},
     "galleryTemplate1": {},
@@ -101,6 +102,7 @@
     "Circle2": 0,
     "Comments_Column1": 4,
     "DataTable1": 0,
+    "DataTable2": 0,
     "Duration_Column1": 5,
     "Gallery1": 0,
     "galleryTemplate1": 0,

@@ -37,7 +37,7 @@
     "dependents": [],
     "id": "3c3dc397-8611-44f6-a9fb-21e88d0e2dbb"
   },
-  "8b6f6111-3097-480b-9c89-998ce1a31034": {
+  "d44b367e-d042-49d5-b6ca-fc20c5c711d2": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1645/1.0.1645.3345/logicflows/icon.png",
@@ -64,11 +64,11 @@
       "UploadAndValidateExcel"
     ],
     "dependencies": {
-      "shared_excelonlinebusiness": "e68bedb6-044d-4792-8231-7936155410a5",
+      "shared_excelonlinebusiness": "e2c8fe74-8fd8-4680-922a-34cbe704d127",
       "shared_sharepointonline": "d90efd73-11e4-4604-800d-7c5609504d96"
     },
     "dependents": [],
-    "id": "8b6f6111-3097-480b-9c89-998ce1a31034"
+    "id": "d44b367e-d042-49d5-b6ca-fc20c5c711d2"
   },
   "d90efd73-11e4-4604-800d-7c5609504d96": {
     "connectionRef": {
@@ -110,11 +110,11 @@
     "dependencies": {},
     "dependents": [
       "3c3dc397-8611-44f6-a9fb-21e88d0e2dbb",
-      "8b6f6111-3097-480b-9c89-998ce1a31034"
+      "d44b367e-d042-49d5-b6ca-fc20c5c711d2"
     ],
     "id": "d90efd73-11e4-4604-800d-7c5609504d96"
   },
-  "e68bedb6-044d-4792-8231-7936155410a5": {
+  "e2c8fe74-8fd8-4680-922a-34cbe704d127": {
     "connectionRef": {
       "displayName": "Excel Online (Business)",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/excelonlinebusiness/icon.png",
@@ -124,8 +124,8 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "8b6f6111-3097-480b-9c89-998ce1a31034"
+      "d44b367e-d042-49d5-b6ca-fc20c5c711d2"
     ],
-    "id": "e68bedb6-044d-4792-8231-7936155410a5"
+    "id": "e2c8fe74-8fd8-4680-922a-34cbe704d127"
   }
 }
