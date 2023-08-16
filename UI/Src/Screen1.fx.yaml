@@ -137,7 +137,7 @@ Screen1 As screen:
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
         DisplayMode: =DisplayMode.View
-        Height: =243
+        Height: =315
         Items: |-
             =Table(
                 {
@@ -158,7 +158,7 @@ Screen1 As screen:
             )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =100
+        TemplateSize: =92
         Width: =336
         X: =435
         Y: =295
@@ -170,17 +170,17 @@ Screen1 As screen:
             OnSelect: =Select(Parent)
             Text: =ThisItem.Value
             Width: =252
-            X: =62
+            X: =43
             Y: =3
             ZIndex: =1
 
         Rectangle8 As rectangle:
-            Height: =88
+            Height: =66
             OnSelect: =Select(Parent)
             Visible: =If(loc_currentStatus.Status>=ThisItem.Id, true, false)
-            Width: =12
-            X: =28
-            Y: =20
+            Width: =0
+            X: =15
+            Y: =26
             ZIndex: =2
 
         Circle2 As circle:
@@ -190,7 +190,6 @@ Screen1 As screen:
             Height: =28
             OnSelect: =Select(Parent)
             Width: =30
-            X: =19
             ZIndex: =3
 
         Icon2 As icon.Check:
@@ -200,7 +199,7 @@ Screen1 As screen:
             OnSelect: =Select(Parent)
             Visible: =loc_currentStatus.Status>=ThisItem.Id
             Width: =25
-            X: =22
+            X: =3
             Y: =3
             ZIndex: =4
 
@@ -227,7 +226,7 @@ Screen1 As screen:
         Text: |-
             ="Current State: " & loc_currentStatus.Title
         Width: =378
-        X: =460
-        Y: =585
+        X: =455
+        Y: =670
         ZIndex: =6
 

@@ -5,18 +5,18 @@
     "App": 1,
     "Button1": 13,
     "Button2": 21,
-    "Circle2": 22,
+    "Circle2": 20,
     "Comments_Column1": 9,
     "DataTable1": 5,
     "Duration_Column1": 10,
     "Gallery1": 15,
     "galleryTemplate1": 16,
     "Host": 3,
-    "Icon2": 26,
+    "Icon2": 18,
     "Label1": 17,
-    "Label3": 33,
+    "Label3": 22,
     "Receiver Count_Column1": 12,
-    "Rectangle8": 31,
+    "Rectangle8": 19,
     "Run Name_Column1": 6,
     "Run Type_Column1": 7,
     "Screen1": 4,
@@ -26,10 +26,10 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/15/2023 14:37:46",
+  "HeaderLastSavedDateTimeUTC": "08/16/2023 07:32:54",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "3c3dc397-8611-44f6-a9fb-21e88d0e2dbb": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/D7ED4F89A60ECD8F030136140D8E0F3E-591075A67533AA25\"",
+    "3c3dc397-8611-44f6-a9fb-21e88d0e2dbb": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/d7ed4f89a60ecd8f030136140d8e0f3e-591075a67533aa25\"",
     "d90efd73-11e4-4604-800d-7c5609504d96": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-0c3b45b8-e291-4213-b128-62a39be1e251\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
@@ -107,14 +107,21 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0694222,
+    "AnalysisLoadTime": 0.1353621,
     "ControlCount": {
+      "button": 2,
+      "circle": 1,
       "dataTable": 1,
       "dataTableColumn": 7,
+      "gallery": 1,
+      "galleryTemplate": 1,
+      "icon": 1,
+      "label": 2,
       "rectangle": 1,
-      "screen": 1
+      "screen": 1,
+      "timer": 1
     },
-    "DeserializationLoadTime": 0.9004484
+    "DeserializationLoadTime": 1.6839687
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

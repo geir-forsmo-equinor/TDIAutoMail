@@ -43,13 +43,15 @@
     "datasets": {
       "https://statoilsrm.sharepoint.com/sites/TDIDOIMAutoMail_tdioff_shared_sharepointonline_107a3eba7637445d95c6e7b1e2ae76e2": {
         "datasetOverride": {
-          "environmentVariableName": "tdioff_shared_sharepointonline_107a3eba7637445d95c6e7b1e2ae76e2"
+          "environmentVariableName": "tdioff_shared_sharepointonline_107a3eba7637445d95c6e7b1e2ae76e2",
+          "name": "https://statoilsrm.sharepoint.com/sites/TDIDOIMAutoMail"
         },
         "dataSources": {
           "LogList": {
             "tableName": "02697fa0-4c85-4aa2-8897-9c5bc73edc43",
             "tableNameOverride": {
-              "environmentVariableName": "tdioff_shared_sharepointonline_cd385006590b4de197cbde3bfb2c59e7"
+              "environmentVariableName": "tdioff_shared_sharepointonline_cd385006590b4de197cbde3bfb2c59e7",
+              "name": "02697fa0-4c85-4aa2-8897-9c5bc73edc43"
             }
           },
           "TDI DO AutoMail Status List": {
