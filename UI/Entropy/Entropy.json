@@ -26,11 +26,13 @@
     "Screen1": 4,
     "Sent Count_Column1": 11,
     "Status_Column1": 8,
-    "Timer1": 14
+    "Timer1": 14,
+    "title_Column1": 27,
+    "url_Column1": 28
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/16/2023 12:31:21",
+  "HeaderLastSavedDateTimeUTC": "08/16/2023 12:41:54",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "3c3dc397-8611-44f6-a9fb-21e88d0e2dbb": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/d7ed4f89a60ecd8f030136140d8e0f3e-591075a67533aa25\"",
@@ -91,7 +93,9 @@
     "Screen1": {},
     "Sent Count_Column1": {},
     "Status_Column1": {},
-    "Timer1": {}
+    "Timer1": {},
+    "title_Column1": {},
+    "url_Column1": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
@@ -120,7 +124,9 @@
     "Screen1": 0,
     "Sent Count_Column1": 6,
     "Status_Column1": 3,
-    "Timer1": 0
+    "Timer1": 0,
+    "title_Column1": 0,
+    "url_Column1": 0
   },
   "ResourcesJsonIndices": {
     "Image-SampleImage": 0
