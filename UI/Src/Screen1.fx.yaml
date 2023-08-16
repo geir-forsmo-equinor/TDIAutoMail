@@ -270,7 +270,7 @@ Screen1 As screen:
             
             Set(varExcel, UploadAndValidateExcel.Run(JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
             
-            //ClearCollect(col_parseJSON, Table(ParseJSON(varExcel)));
+            ClearCollect(col_parseJSON, Table(ParseJSON(varExcel)));
             
             Reset(AttachmentControl);
         PaddingBottom: =5
