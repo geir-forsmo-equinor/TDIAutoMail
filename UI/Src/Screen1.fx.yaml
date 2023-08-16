@@ -252,14 +252,26 @@ Screen1 As screen:
         IsInDataCard: =true
         Items: =
         OnAddFile: |
-            =Set(varDemoFromAttachmentControl, JSON(Image1.Image, JSONFormat.IncludeBinaryData));
+            =Set(varDemoFromAttachmentControl, JSON(img_datastream.Image, JSONFormat.IncludeBinaryData));
             Set(varBase64Only, Mid(varDemoFromAttachmentControl, Find(",", varDemoFromAttachmentControl) + 1, Len(varDemoFromAttachmentControl) - Find(",", varDemoFromAttachmentControl) - 1));
             //Set(varFileLink, UploadFile.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).sharepointfilelink);
             
             /*If(UploadandSaveToSharepoint.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).success = "true",
                 Notify("Flow Run Completed Successfully", NotificationType.Success, 2000),
                 Notify("Flow Failed To Run", NotificationType.Error, 2000));*/
-                UploadandValidateExcel.Run(Last(AttachmentControl.Attachments).Name,varBase64Only);
+            
+            Clear(col_attachment_flow);
+            Collect(col_attachment_flow, 
+                {
+                        Title: Last(AttachmentControl.Attachments).Name,
+                        Datastream: img_datastream.Image
+                }
+            );
+            
+            Set(varExcel, UploadAndValidateExcel.Run(JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
+            
+            ClearCollect(col_parseJSON, Table(ParseJSON(varExcel)));
+            
             Reset(AttachmentControl);
         PaddingBottom: =5
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -271,7 +283,7 @@ Screen1 As screen:
         Y: =132
         ZIndex: =8
 
-    Image1 As image:
+    img_datastream As image:
         Image: =Last(AttachmentControl.Attachments).Value
         Visible: =false
         X: =1266
