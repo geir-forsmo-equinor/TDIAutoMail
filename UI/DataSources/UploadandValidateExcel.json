@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "93a06e59-5f12-44b0-914c-f7e9add8aa39",
+    "Name": "UploadandValidateExcel",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "92d3a779-193c-ee11-bdf4-6045bd8c9a03"
+  }
+]

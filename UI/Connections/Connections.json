@@ -5,6 +5,9 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1645/1.0.1645.3345/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "d90efd73-11e4-4604-800d-7c5609504d96": {
+          "value": "shared_sharepointonline"
+        },
         "workflowEntityId": {
           "value": "6b1a9d84-713b-ee11-bdf4-0022488832c2"
         },
@@ -13,6 +16,9 @@
         }
       },
       "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "d90efd73-11e4-4604-800d-7c5609504d96"
+        },
         "workflowEntityId": {
           "value": "6b1a9d84-713b-ee11-bdf4-0022488832c2"
         },
@@ -30,6 +36,53 @@
     },
     "dependents": [],
     "id": "3c3dc397-8611-44f6-a9fb-21e88d0e2dbb"
+  },
+  "725906d8-bb3d-4ba2-8887-af7016b6c7c5": {
+    "connectionRef": {
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "ae985706-911c-40e5-9c9a-483f3bf67293"
+    ],
+    "id": "725906d8-bb3d-4ba2-8887-af7016b6c7c5"
+  },
+  "ae985706-911c-40e5-9c9a-483f3bf67293": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1645/1.0.1645.3345/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {
+          "value": "92d3a779-193c-ee11-bdf4-6045bd8c9a03"
+        },
+        "workflowName": {
+          "value": "85100913-6b30-1651-1635-89f3c51d9d17"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {
+          "value": "92d3a779-193c-ee11-bdf4-6045bd8c9a03"
+        },
+        "workflowName": {
+          "value": "85100913-6b30-1651-1635-89f3c51d9d17"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "UploadandValidateExcel"
+    ],
+    "dependencies": {
+      "shared_excelonlinebusiness": "725906d8-bb3d-4ba2-8887-af7016b6c7c5",
+      "shared_sharepointonline": "d90efd73-11e4-4604-800d-7c5609504d96"
+    },
+    "dependents": [],
+    "id": "ae985706-911c-40e5-9c9a-483f3bf67293"
   },
   "d90efd73-11e4-4604-800d-7c5609504d96": {
     "connectionRef": {
@@ -70,7 +123,8 @@
     ],
     "dependencies": {},
     "dependents": [
-      "3c3dc397-8611-44f6-a9fb-21e88d0e2dbb"
+      "3c3dc397-8611-44f6-a9fb-21e88d0e2dbb",
+      "ae985706-911c-40e5-9c9a-483f3bf67293"
     ],
     "id": "d90efd73-11e4-4604-800d-7c5609504d96"
   }

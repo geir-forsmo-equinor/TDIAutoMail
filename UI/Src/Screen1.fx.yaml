@@ -246,7 +246,7 @@ Screen1 As screen:
         DisplayMode: =
         Fill: =Color.Transparent
         Height: =144
-        HoverBorderColor: =Color.Black
+        HoverBorderColor: =Color.White
         HoverColor: =Color.Transparent
         HoverFill: =Color.Transparent
         IsInDataCard: =true
@@ -259,6 +259,7 @@ Screen1 As screen:
             /*If(UploadandSaveToSharepoint.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).success = "true",
                 Notify("Flow Run Completed Successfully", NotificationType.Success, 2000),
                 Notify("Flow Failed To Run", NotificationType.Error, 2000));*/
+                UploadandValidateExcel.Run(Last(AttachmentControl.Attachments).Name,varBase64Only);
             Reset(AttachmentControl);
         PaddingBottom: =5
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
