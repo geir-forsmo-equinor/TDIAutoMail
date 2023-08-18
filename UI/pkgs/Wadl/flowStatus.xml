@@ -3,16 +3,24 @@
   <grammars>
     <jsonTypes targetNamespace="https://europe-002.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
       <string name="ManualTriggerInput_text_def" />
-      <string name="ManualTriggerInput_text_1_def" />
       <string name="ManualTriggerInput_text_2_def" />
       <object name="ManualTriggerInput">
         <property name="text" type="string" />
-        <property name="text_1" type="string" />
         <property name="text_2" type="string" />
       </object>
-      <string name="ResponseActionOutput_response_def" />
+      <string name="ResponseActionOutput_response_def_items_def_title_def" />
+      <string name="ResponseActionOutput_response_def_items_def_url_def" />
+      <string name="ResponseActionOutput_response_def_items_def_group_owners_def" />
+      <string name="ResponseActionOutput_response_def_items_def_security_classification_def" />
+      <object name="ResponseActionOutput_response_def_items_def">
+        <property name="title" type="string" />
+        <property name="url" type="string" />
+        <property name="group_owners" type="string" />
+        <property name="security_classification" type="string" />
+      </object>
+      <array typeRef="ResponseActionOutput_response_def_items_def" name="ResponseActionOutput_response_def" />
       <object name="ResponseActionOutput">
-        <property name="response" type="string" />
+        <property name="response" typeRef="ResponseActionOutput_response_def" />
       </object>
       <object name="Run_responses_default_def" />
     </jsonTypes>
@@ -29,9 +37,6 @@
           <representation mediaType="application/json">
             <param style="plain" name="text" path="/text" type="xs:string" required="true">
               <doc title="GUID" />
-            </param>
-            <param style="plain" name="text_1" path="/text_1" type="xs:string" required="true">
-              <doc title="SelectedMailType" />
             </param>
             <param style="plain" name="text_2" path="/text_2" type="xs:string" required="true">
               <doc title="JSON" />
