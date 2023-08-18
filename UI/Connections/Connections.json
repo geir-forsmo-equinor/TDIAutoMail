@@ -1,20 +1,38 @@
 {
-  "27c1af6e-ad32-452e-bfa3-896bc6e5bc4d": {
+  "035ee467-5788-4e22-a663-8536609f3023": {
     "connectionRef": {
-      "displayName": "Excel Online (Business)",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/excelonlinebusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1645/1.0.1645.3345/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {
+          "value": "6b1a9d84-713b-ee11-bdf4-0022488832c2"
+        },
+        "workflowName": {
+          "value": "d7ed4f89-a60e-cd8f-0301-36140d8e0f3e"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {
+          "value": "6b1a9d84-713b-ee11-bdf4-0022488832c2"
+        },
+        "workflowName": {
+          "value": "d7ed4f89-a60e-cd8f-0301-36140d8e0f3e"
+        }
+      }
     },
     "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "80e30f4c-d424-4474-a8e2-f715c435b5d4",
-      "a0bec593-beed-4a24-85f9-6fd77d444d13"
+    "dataSources": [
+      "flowStatus"
     ],
-    "id": "27c1af6e-ad32-452e-bfa3-896bc6e5bc4d"
+    "dependencies": {
+      "shared_excelonlinebusiness": "27c1af6e-ad32-452e-bfa3-896bc6e5bc4d",
+      "shared_sharepointonline": "d90efd73-11e4-4604-800d-7c5609504d96"
+    },
+    "dependents": [],
+    "id": "035ee467-5788-4e22-a663-8536609f3023"
   },
-  "80e30f4c-d424-4474-a8e2-f715c435b5d4": {
+  "12c4750a-bef9-4741-bbe7-52eb2957c087": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1645/1.0.1645.3345/logicflows/icon.png",
@@ -57,40 +75,100 @@
       "shared_sharepointonline": "d90efd73-11e4-4604-800d-7c5609504d96"
     },
     "dependents": [],
-    "id": "80e30f4c-d424-4474-a8e2-f715c435b5d4"
+    "id": "12c4750a-bef9-4741-bbe7-52eb2957c087"
   },
-  "a0bec593-beed-4a24-85f9-6fd77d444d13": {
+  "27c1af6e-ad32-452e-bfa3-896bc6e5bc4d": {
     "connectionRef": {
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "12c4750a-bef9-4741-bbe7-52eb2957c087",
+      "035ee467-5788-4e22-a663-8536609f3023"
+    ],
+    "id": "27c1af6e-ad32-452e-bfa3-896bc6e5bc4d"
+  },
+  "c4f134a9-93eb-4028-a091-1a668aea2a05": {
+    "connectionRef": {
+      "apiTier": "Standard",
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1645/1.0.1645.3345/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "eb22ebef-c633-4e1c-b235-c1c3b6f0c4cc": {
+          "value": "shared_sharepointonline"
+        },
         "workflowEntityId": {
-          "value": "6b1a9d84-713b-ee11-bdf4-0022488832c2"
+          "value": "6f7c1fac-b135-ee11-bdf4-6045bd8a4bcc"
         },
         "workflowName": {
-          "value": "d7ed4f89-a60e-cd8f-0301-36140d8e0f3e"
+          "value": "fa8d42c8-f679-ce20-50b0-2310d1ecfbc7"
         }
       },
       "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "eb22ebef-c633-4e1c-b235-c1c3b6f0c4cc"
+        },
         "workflowEntityId": {
-          "value": "6b1a9d84-713b-ee11-bdf4-0022488832c2"
+          "value": "6f7c1fac-b135-ee11-bdf4-6045bd8a4bcc"
         },
         "workflowName": {
-          "value": "d7ed4f89-a60e-cd8f-0301-36140d8e0f3e"
+          "value": "fa8d42c8-f679-ce20-50b0-2310d1ecfbc7"
         }
       }
     },
     "datasets": {},
     "dataSources": [
-      "flowStatus"
+      "UploadFile"
     ],
     "dependencies": {
-      "shared_excelonlinebusiness": "27c1af6e-ad32-452e-bfa3-896bc6e5bc4d",
-      "shared_sharepointonline": "d90efd73-11e4-4604-800d-7c5609504d96"
+      "shared_sharepointonline": "eb22ebef-c633-4e1c-b235-c1c3b6f0c4cc"
     },
     "dependents": [],
-    "id": "a0bec593-beed-4a24-85f9-6fd77d444d13"
+    "id": "c4f134a9-93eb-4028-a091-1a668aea2a05"
+  },
+  "d6fce706-bf83-49b0-b83e-e34766e01b6c": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1645/1.0.1645.3345/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "eb22ebef-c633-4e1c-b235-c1c3b6f0c4cc": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {
+          "value": "0045344a-8837-ee11-bdf4-6045bd8a4bcc"
+        },
+        "workflowName": {
+          "value": "6d268070-398d-d92f-bb30-14e032a4f023"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "eb22ebef-c633-4e1c-b235-c1c3b6f0c4cc"
+        },
+        "workflowEntityId": {
+          "value": "0045344a-8837-ee11-bdf4-6045bd8a4bcc"
+        },
+        "workflowName": {
+          "value": "6d268070-398d-d92f-bb30-14e032a4f023"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "GetCarInventorySPListItems"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "eb22ebef-c633-4e1c-b235-c1c3b6f0c4cc"
+    },
+    "dependents": [],
+    "id": "d6fce706-bf83-49b0-b83e-e34766e01b6c"
   },
   "d90efd73-11e4-4604-800d-7c5609504d96": {
     "connectionRef": {
@@ -131,8 +209,8 @@
     ],
     "dependencies": {},
     "dependents": [
-      "80e30f4c-d424-4474-a8e2-f715c435b5d4",
-      "a0bec593-beed-4a24-85f9-6fd77d444d13"
+      "12c4750a-bef9-4741-bbe7-52eb2957c087",
+      "035ee467-5788-4e22-a663-8536609f3023"
     ],
     "id": "d90efd73-11e4-4604-800d-7c5609504d96"
   }

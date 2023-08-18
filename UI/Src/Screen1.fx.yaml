@@ -1,125 +1,25 @@
 Screen1 As screen:
     Fill: =RGBA(0, 0, 0, 1)
 
-    DataTable1 As dataTable.datatable:
-        BorderStyle: =BorderStyle.Solid
-        DisplayMode: =DisplayMode.Edit
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =120
-        Items: ='TDI DO AutoMail Status List'
-        Width: =1285
-        X: =40
-        Y: =40
+    Label2_1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(167, 182, 203, 1)
+        Height: =666
+        Text: =""
+        Width: =393
+        Y: =102
         ZIndex: =1
-
-        "'Run Name_Column1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Run Name"
-            FieldName: ="Title"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =1
-            Text: =ThisItem.'Run Name'
-            Width: =100
-            X: =135
-            Y: =0
-            ZIndex: =1
-
-        "'Run Type_Column1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Run Type"
-            FieldName: ="SecurityClassification"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =2
-            Text: =ThisItem.'Run Type'.Value
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =2
-
-        Status_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Status"
-            FieldName: ="Status"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.Status.Value
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =3
-
-        Comments_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Comments"
-            FieldName: ="Comments"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: =ThisItem.Comments
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =4
-
-        Duration_Column1 As dataTableColumn.dateTimeColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Duration"
-            FieldName: ="Duration"
-            FieldVariantName: ="dateTimeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =5
-            Text: =Text(ThisItem.Duration,DateTimeFormat.LongDateTime)
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =5
-
-        "'Sent Count_Column1' As dataTableColumn.numberColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Sent Count"
-            FieldName: ="SentCount"
-            FieldVariantName: ="numberColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =6
-            Text: =ThisItem.'Sent Count'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =6
-
-        "'Receiver Count_Column1' As dataTableColumn.numberColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Receiver Count"
-            FieldName: ="ReceiverCount"
-            FieldVariantName: ="numberColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =7
-            Text: =ThisItem.'Receiver Count'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =7
 
     Button1 As button:
         OnSelect: |-
             =//create GUID
-            Set(gbl_stateGUID,GUID());
+            /*Set(gbl_stateGUID,GUID());
             
             //start Power Automate Flow
-            flowStatus.Run(gbl_stateGUID)
+            flowStatus.Run(gbl_stateGUID)*/
         Text: ="Submit"
-        X: =40
-        Y: =139
+        X: =1206
+        Y: =728
         ZIndex: =2
 
     Timer1 As timer:
@@ -161,8 +61,8 @@ Screen1 As screen:
         ShowScrollbar: =false
         TemplateSize: =88
         Width: =336
-        X: =54
-        Y: =241
+        X: =29
+        Y: =170
         ZIndex: =4
 
         Label1 As label:
@@ -219,8 +119,8 @@ Screen1 As screen:
             );
              Set(gbl_stateGUID,"");
         Text: ="Reset"
-        X: =239
-        Y: =139
+        X: =1201
+        Y: =138
         ZIndex: =5
 
     Label3 As label:
@@ -228,86 +128,16 @@ Screen1 As screen:
         Text: |-
             ="Current State: " & loc_currentStatus.Title
         Width: =378
-        X: =40
-        Y: =524
+        X: =15
+        Y: =453
         ZIndex: =6
-
-    Icon1 As icon.Add:
-        Height: =96
-        Icon: =Icon.Add
-        Width: =80
-        X: =733
-        Y: =156
-        ZIndex: =7
-
-    AttachmentControl As attachments:
-        BorderColor: =Color.Transparent
-        Color: =Color.Transparent
-        DisplayMode: =
-        Fill: =Color.Transparent
-        Height: =144
-        HoverBorderColor: =Color.White
-        HoverColor: =Color.Transparent
-        HoverFill: =Color.Transparent
-        IsInDataCard: =true
-        Items: =
-        OnAddFile: |+
-            =
-            Set(varDemoFromAttachmentControl, JSON(img_datastream.Image, JSONFormat.IncludeBinaryData));
-            Set(varBase64Only, Mid(varDemoFromAttachmentControl, Find(",", varDemoFromAttachmentControl) + 1, Len(varDemoFromAttachmentControl) - Find(",", varDemoFromAttachmentControl) - 1));
-            //Set(varFileLink, UploadFile.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).sharepointfilelink);
-            
-            /*If(UploadandSaveToSharepoint.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).success = "true",
-                Notify("Flow Run Completed Successfully", NotificationType.Success, 2000),
-                Notify("Flow Failed To Run", NotificationType.Error, 2000));*/
-            
-            Clear(col_attachment_flow);
-            Collect(col_attachment_flow, 
-                {
-                        Title: Last(AttachmentControl.Attachments).Name,
-                        Datastream: img_datastream.Image
-                }
-            );
-            
-            //Set(varExcel, UploadAndValidateExcel.Run(JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
-            
-            
-            //create GUID
-            Set(gbl_stateGUID,GUID());
-            
-            //start Power Automate Flow
-            Set(varExcel, flowStatus.Run(gbl_stateGUID,JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
-            
-            ClearCollect(col_parseJSON,
-                ForAll( Table(ParseJSON(varExcel)), 
-                    { 
-                        title: Text( Value.title), 
-                        url: Text( Value.url),
-                        group_owners:Text(Value.group_owners),
-                        security_classification: Text(Value.security_classification)
-                    }
-                )
-            );
-            
-            Reset(AttachmentControl);
-            
-            
-        PaddingBottom: =5
-        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-        PaddingRight: =5
-        PaddingTop: =5
-        Tooltip: =
-        Width: =182
-        X: =682
-        Y: =132
-        ZIndex: =8
 
     img_datastream As image:
         Image: =Last(AttachmentControl.Attachments).Value
         Visible: =false
         X: =1266
         Y: =668
-        ZIndex: =9
+        ZIndex: =7
 
     DataTable2 As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
@@ -317,9 +147,9 @@ Screen1 As screen:
         Height: =385
         Items: =col_parseJSON
         Width: =771
-        X: =495
-        Y: =325
-        ZIndex: =10
+        X: =414
+        Y: =138
+        ZIndex: =8
 
         title_Column2 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -376,4 +206,82 @@ Screen1 As screen:
             X: =0
             Y: =0
             ZIndex: =11
+
+    Label2 As label:
+        Align: =Align.Center
+        Fill: =RGBA(186, 202, 226, 1)
+        Height: =102
+        Text: ="Automail App"
+        Width: =1366
+        ZIndex: =9
+
+    Icon1 As icon.Add:
+        Height: =96
+        Icon: =Icon.Add
+        Width: =80
+        X: =1218
+        Y: =5
+        ZIndex: =10
+
+    AttachmentControl As attachments:
+        BorderColor: =Color.Transparent
+        Color: =Color.Transparent
+        DisplayMode: =
+        Fill: =Color.Transparent
+        Height: =96
+        HoverBorderColor: =Color.White
+        HoverColor: =Color.Transparent
+        HoverFill: =Color.Transparent
+        IsInDataCard: =true
+        Items: =
+        OnAddFile: |+
+            =
+            Set(varDemoFromAttachmentControl, JSON(img_datastream.Image, JSONFormat.IncludeBinaryData));
+            Set(varBase64Only, Mid(varDemoFromAttachmentControl, Find(",", varDemoFromAttachmentControl) + 1, Len(varDemoFromAttachmentControl) - Find(",", varDemoFromAttachmentControl) - 1));
+            //Set(varFileLink, UploadFile.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).sharepointfilelink);
+            
+            /*If(UploadandSaveToSharepoint.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).success = "true",
+                Notify("Flow Run Completed Successfully", NotificationType.Success, 2000),
+                Notify("Flow Failed To Run", NotificationType.Error, 2000));*/
+            
+            Clear(col_attachment_flow);
+            Collect(col_attachment_flow, 
+                {
+                        Title: Last(AttachmentControl.Attachments).Name,
+                        Datastream: img_datastream.Image
+                }
+            );
+            
+            //Set(varExcel, UploadAndValidateExcel.Run(JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
+            
+            
+            //create GUID
+            Set(gbl_stateGUID,GUID());
+            
+            //start Power Automate Flow
+            Set(varExcel, flowStatus.Run(gbl_stateGUID,JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
+            
+            ClearCollect(col_parseJSON,
+                ForAll( Table(ParseJSON(varExcel)), 
+                    { 
+                        title: Text( Value.title), 
+                        url: Text( Value.url),
+                        group_owners:Text(Value.group_owners),
+                        security_classification: Text(Value.security_classification)
+                    }
+                )
+            );
+            
+            Reset(AttachmentControl);
+            
+            
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        Tooltip: =
+        Width: =182
+        X: =1167
+        Y: =5
+        ZIndex: =11
 

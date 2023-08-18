@@ -1,5 +1,16 @@
 App As appinfo:
     BackEnabled: =false
+    OnStart: |-
+        =Set(colSidebarMenu,
+          Table(
+            {Value: "News", Icon: Icon.Newspaper, Screen: 'News Screen'},
+            {Value: "Science", Icon: Icon.CameraAperture, Screen: 'Science Screen'},
+            {Value: "Travel", Icon: Icon.Airplane, Screen: 'Travel Screen'},
+            {Value: "Budget", Icon: Icon.Money, Screen: 'Budget Screen'},
+            {Value: "Maps", Icon: Icon.Waypoint, Screen: 'Maps Screen'},
+            {Value: "Settings", Icon: Icon.Settings, Screen: 'Settings Screen'}
+          )
+        )
     Theme: =PlatinumTheme
 
     Host As hostControl.DefaultHostControlVariant:
