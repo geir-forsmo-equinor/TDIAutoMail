@@ -275,7 +275,7 @@ Screen1 As screen:
             Set(gbl_stateGUID,GUID());
             
             //start Power Automate Flow
-            Set(varExcel, flowStatus.Run(gbl_stateGUID,JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData),"Confidential").response);
+            Set(varExcel, flowStatus.Run(gbl_stateGUID,JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
             
             ClearCollect(col_parseJSON,
                 ForAll( Table(ParseJSON(varExcel)), 

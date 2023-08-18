@@ -405,6 +405,47 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Screen1.AttachmentControl.OnAddFile"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.AttachmentControl.OnAddFile",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 86,
+                  "charOffset": 1022,
+                  "snippet": {
+                    "text": "flowStatus.Run(gbl_stateGUID,JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData))"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnAddFile",
+                "module": "Screen1",
+                "type": "Screen1.AttachmentControl"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "2",
+              "3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadArity",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Screen1"
                 }
               ],
