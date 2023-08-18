@@ -252,7 +252,8 @@ Screen1 As screen:
         IsInDataCard: =true
         Items: =
         OnAddFile: |+
-            =Set(varDemoFromAttachmentControl, JSON(img_datastream.Image, JSONFormat.IncludeBinaryData));
+            =Reset(AttachmentControl);
+            Set(varDemoFromAttachmentControl, JSON(img_datastream.Image, JSONFormat.IncludeBinaryData));
             Set(varBase64Only, Mid(varDemoFromAttachmentControl, Find(",", varDemoFromAttachmentControl) + 1, Len(varDemoFromAttachmentControl) - Find(",", varDemoFromAttachmentControl) - 1));
             //Set(varFileLink, UploadFile.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).sharepointfilelink);
             
