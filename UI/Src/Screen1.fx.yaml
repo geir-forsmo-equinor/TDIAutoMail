@@ -270,6 +270,13 @@ Screen1 As screen:
             
             Set(varExcel, UploadAndValidateExcel.Run(JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
             
+            
+            //create GUID
+            Set(gbl_stateGUID,GUID());
+            
+            //start Power Automate Flow
+            //flowStatus.Run(gbl_stateGUID,"","");
+            
             ClearCollect(col_parseJSON,
                 ForAll( Table(ParseJSON(varExcel)), 
                     { 
