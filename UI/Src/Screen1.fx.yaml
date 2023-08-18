@@ -243,7 +243,7 @@ Screen1 As screen:
             /*If(UploadandSaveToSharepoint.Run(Last(AttachmentControl.Attachments).Name, varBase64Only).success = "true",
                 Notify("Flow Run Completed Successfully", NotificationType.Success, 2000),
                 Notify("Flow Failed To Run", NotificationType.Error, 2000));*/
-            Clear(col_Excel);
+            
             Clear(col_attachment_flow);
             Collect(col_attachment_flow, 
                 {
