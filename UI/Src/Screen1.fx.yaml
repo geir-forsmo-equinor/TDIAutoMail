@@ -268,14 +268,14 @@ Screen1 As screen:
                 }
             );
             
-            Set(varExcel, UploadAndValidateExcel.Run(JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
+            //Set(varExcel, UploadAndValidateExcel.Run(JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData)).response);
             
             
             //create GUID
             Set(gbl_stateGUID,GUID());
             
             //start Power Automate Flow
-            //Set(varExcel, flowStatus.Run(gbl_stateGUID,JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData),"Confidential").response);
+            Set(varExcel, flowStatus.Run(gbl_stateGUID,JSON(col_attachment_flow,  JSONFormat.IncludeBinaryData),"Confidential").response);
             
             ClearCollect(col_parseJSON,
                 ForAll( Table(ParseJSON(varExcel)), 
