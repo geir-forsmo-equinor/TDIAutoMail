@@ -224,7 +224,8 @@ Screen1 As screen:
         IsInDataCard: =true
         Items: =
         OnAddFile: |+
-            =UpdateContext(
+            =Refresh('LogList');
+            UpdateContext(
                 {
                     loc_currentStatus: Patch(loc_currentStatus,
                         {
