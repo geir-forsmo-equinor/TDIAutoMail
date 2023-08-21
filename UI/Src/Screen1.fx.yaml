@@ -224,7 +224,7 @@ Screen1 As screen:
         IsInDataCard: =true
         Items: =
         OnAddFile: |+
-            =Refresh('LogList');
+            =Refresh(LogList);
             UpdateContext(
                 {
                     loc_currentStatus: Patch(loc_currentStatus,
@@ -273,7 +273,7 @@ Screen1 As screen:
                     }
                 )
             );
-            Refresh('LogList');
+            Refresh(LogList);
             Reset(AttachmentControl);
             
             
